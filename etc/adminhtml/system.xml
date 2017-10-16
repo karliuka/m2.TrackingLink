@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2011-2017 Karliuka Vitalii(karliuka.vitalii@gmail.com)
+ * 
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers">
+            <group id="dhl">
+                <field id="tracking_url" translate="label" type="text" sortOrder="2250" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Tracking Url</label>
+                </field>
+            </group>             
+            <group id="fedex">
+                <field id="tracking_url" translate="label" type="text" sortOrder="350" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Tracking Url</label>
+                </field>
+            </group>            
+            <group id="ups">
+                <field id="tracking_url" translate="label" type="text" sortOrder="1950" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Tracking Url</label>
+                </field>
+            </group>            
+            <group id="usps">
+                <field id="tracking_url" translate="label" type="text" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Tracking Url</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
