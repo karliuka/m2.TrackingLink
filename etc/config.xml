@@ -9,19 +9,13 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <carriers>
-            <dhl>
-                <tracking_url><![CDATA[http://webtrack.dhlglobalmail.com/?trackingnumber={{number}}]]></tracking_url>
-            </dhl>
-            <fedex>
-                <tracking_url><![CDATA[https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers={{number}}]]></tracking_url>
-            </fedex>
-            <ups>
-                <tracking_url><![CDATA[https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1={{number}}]]></tracking_url>
-            </ups>
-            <usps>
-                <tracking_url><![CDATA[https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums={{number}}]]></tracking_url>
-            </usps>            
-        </carriers>
+        <faonni_tracking>
+            <service_url>
+                <dhl><![CDATA[http://webtrack.dhlglobalmail.com/?trackingnumber={{number}}]]></dhl>
+				<fedex><![CDATA[https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers={{number}}]]></fedex>
+				<ups><![CDATA[https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1={{number}}]]></ups>
+				<usps><![CDATA[https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums={{number}}]]></usps>
+            </service_url>
+        </faonni_tracking>
     </default>
 </config>

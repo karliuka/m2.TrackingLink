@@ -23,7 +23,7 @@ class Data extends AbstractHelper
      */
     public function getCarrierUrl($carrierCode, $store = null)
     {
-        return $this->_getConfig("carriers/{$carrierCode}/tracking_url", $store);
+        return $this->_getConfig("faonni_tracking/service_url/{$carrierCode}", $store);
     }
     
     /**

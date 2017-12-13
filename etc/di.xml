@@ -10,7 +10,10 @@
 	xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
 	<!--
 	plugin
-	-->		
+	-->
+    <type name="\Magento\Config\Model\Config\Structure\Element\Group">
+        <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Config\Model\Config\Structure\Element\Group" />
+    </type>		
     <type name="\Magento\Email\Model\Template\Filter">
         <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Email\Model\Template\Filter" />
     </type>
