@@ -2,6 +2,10 @@
 
 Extension add Tracking Url in Shipment Email.
 
+### Config
+
+<img alt="Magento2 Tracking Link" src="https://karliuka.github.io/m2/tracking-link/config.png" style="width:100%"/>
+
 ### Track Email
 
 <img alt="Magento2 Tracking Link" src="https://karliuka.github.io/m2/tracking-link/email.png" style="width:100%"/>
