@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright © 2011-2017 Karliuka Vitalii(karliuka.vitalii@gmail.com)
- * 
+ * Copyright © 2011-2018 Karliuka Vitalii(karliuka.vitalii@gmail.com)
+ *
  * See COPYING.txt for license details.
  */
 namespace Faonni\TrackingLink\Plugin\Config\Model\Config\Structure\Element;
