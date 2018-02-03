@@ -10,7 +10,7 @@
 	xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">  
     <module name="Faonni_TrackingLink" setup_version="2.0.5">
         <sequence>
-
+			<module name="Magento_Email"/>
         </sequence>
 	</module>	
 </config>
