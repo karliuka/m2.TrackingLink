@@ -15,7 +15,7 @@ The extension supports all couriers which support shipping tracking.
 
 ## Compatibility
 
-Magento CE 2.0.x, 2.1.x, 2.2.x
+Magento CE(EE) 2.0.x, 2.1.x, 2.2.x
 
 ## Install
 
@@ -54,4 +54,37 @@ Magento CE 2.0.x, 2.1.x, 2.2.x
 In the Magento Admin Panel go to *Stores > Configuration > Sales > Tracking Settings > Tracking Service Url*.
 
 <img alt="Magento2 Tracking Link" src="https://karliuka.github.io/m2/tracking-link/config.png" style="width:100%"/>
+
+## Uninstall
+This works only with modules defined as Composer packages.
+
+#### Remove database data
+
+1. Go to Magento2 root folder
+
+2. Enter following commands to remove database data:
+
+    ```bash
+    php bin/magento module:uninstall -r Faonni_TrackingLink
+  
+#### Remove Extension
+    
+1. Go to Magento2 root folder
+
+2. Enter following commands to remove:
+
+    ```bash
+    composer remove faonni/module-tracking-link
+    ```
+
+### Completion of uninstall
+
+1. Go to Magento2 root folder
+
+2. Enter following commands:
+
+    ```bash
+	php bin/magento setup:upgrade
+	php bin/magento setup:di:compile
+	php bin/magento setup:static-content:deploy  (optional)
 
