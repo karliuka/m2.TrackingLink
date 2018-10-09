@@ -51,7 +51,8 @@ class Track extends Template
     public function getTrackingUrl($track)
     {
         $url = $this->_helper->getCarrierUrl(
-            $track->getCarrierCode()
+            $track->getCarrierCode(),
+            $track->getStoreId()
         );
         return $url ? str_replace('{{number}}', $track->getNumber(), $url) : null;
     }
