@@ -12,9 +12,9 @@
         <faonni_tracking>
             <service_url>
                 <dhl><![CDATA[http://webtrack.dhlglobalmail.com/?trackingnumber={{number}}]]></dhl>
-				<fedex><![CDATA[https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers={{number}}]]></fedex>
-				<ups><![CDATA[https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums={{number}}]]></ups>
-				<usps><![CDATA[https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1={{number}}]]></usps>
+                <fedex><![CDATA[https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers={{number}}]]></fedex>
+                <ups><![CDATA[https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums={{number}}]]></ups>
+                <usps><![CDATA[https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1={{number}}]]></usps>
             </service_url>
         </faonni_tracking>
     </default>

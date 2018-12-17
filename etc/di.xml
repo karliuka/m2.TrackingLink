@@ -8,9 +8,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
-	<!--
-	plugin
-	-->
+	<!-- plugin -->
     <type name="\Magento\Config\Model\Config\Structure\Element\Group">
         <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Config\Model\Config\Structure\Element\Group" />
     </type>		
