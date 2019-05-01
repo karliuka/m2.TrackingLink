@@ -11,6 +11,8 @@
     <default>
         <faonni_tracking>
             <service_url>
+			    <custom><![CDATA[https://www.myhermes.de/empfangen/sendungsverfolgung/?suche={{number}}]]></dhlshipping>
+                <dhlshipping><![CDATA[https://www.dhl.de/de/privatkunden.html?piececode={{number}}]]></dhlshipping>
                 <dhl><![CDATA[http://webtrack.dhlglobalmail.com/?trackingnumber={{number}}]]></dhl>
                 <fedex><![CDATA[https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers={{number}}]]></fedex>
                 <ups><![CDATA[https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums={{number}}]]></ups>

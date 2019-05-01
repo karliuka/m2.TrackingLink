@@ -14,6 +14,12 @@
 			<resource>Faonni_TrackingLink::tracking</resource>
             <group id="service_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
                 <label>Tracking Service Url</label>
+                <field id="dhlshipping" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>DHL Versenden</label>
+                </field>
+                <field id="custom" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Custom</label>
+                </field>
                 <field id="dhl" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
                     <label>DHL</label>
                 </field>
