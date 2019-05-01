@@ -1,7 +1,7 @@
 # Magento2 Tracking Link
 
 [![Total Downloads](https://poser.pugx.org/faonni/module-tracking-link/downloads)](https://packagist.org/packages/faonni/module-tracking-link)
-[![Latest Stable Version](https://poser.pugx.org/faonni/module-tracking-link/v/stable)](https://packagist.org/packages/faonni/module-tracking-link)	
+[![Latest Stable Version](https://poser.pugx.org/faonni/module-tracking-link/v/stable)](https://packagist.org/packages/faonni/module-tracking-link)
 
 Extension add Tracking Url in Shipment Email.
 
@@ -29,9 +29,9 @@ Magento CE(EE) 2.0.x, 2.1.x, 2.2.x, 2.3.x
     composer require faonni/module-tracking-link
     ```
    Wait while dependencies are updated.
-   
+
 #### Manual Installation
-   
+
 1. Create a folder {Magento root}/app/code/Faonni/TrackingLink
 
 2. Download the corresponding [latest version](https://github.com/karliuka/m2.TrackingLink/releases)
@@ -45,9 +45,9 @@ Magento CE(EE) 2.0.x, 2.1.x, 2.2.x, 2.3.x
 2. Enter following commands:
 
     ```bash
-	php bin/magento setup:upgrade
-	php bin/magento setup:di:compile
-	php bin/magento setup:static-content:deploy  (optional)
+    php bin/magento setup:upgrade
+    php bin/magento setup:di:compile
+    php bin/magento setup:static-content:deploy  (optional)
 
 ### Configuration
 
@@ -66,9 +66,9 @@ This works only with modules defined as Composer packages.
 
     ```bash
     php bin/magento module:uninstall -r Faonni_TrackingLink
-  
+
 #### Remove Extension
-    
+
 1. Go to Magento2 root folder
 
 2. Enter following commands to remove:
@@ -84,7 +84,7 @@ This works only with modules defined as Composer packages.
 2. Enter following commands:
 
     ```bash
-	php bin/magento setup:upgrade
-	php bin/magento setup:di:compile
-	php bin/magento setup:static-content:deploy  (optional)
+    php bin/magento setup:upgrade
+    php bin/magento setup:di:compile
+    php bin/magento setup:static-content:deploy  (optional)
 
