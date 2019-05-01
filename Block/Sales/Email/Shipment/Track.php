@@ -20,7 +20,7 @@ class Track extends Template
      *
      * @var \Faonni\TrackingLink\Helper\Data
      */
-    protected $_helper;
+    protected $helper;
 
     /**
      * Initialize Block
@@ -34,7 +34,7 @@ class Track extends Template
         TrackingLinkHelper $helper,
         array $data = []
     ) {
-        $this->_helper = $helper;
+        $this->helper = $helper;
 
         parent::__construct(
             $context,
@@ -50,7 +50,7 @@ class Track extends Template
      */
     public function getTrackingUrl($track)
     {
-        $url = $this->_helper->getCarrierUrl(
+        $url = $this->helper->getCarrierUrl(
             $track->getCarrierCode(),
             $track->getStoreId()
         );

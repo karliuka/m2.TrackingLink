@@ -18,14 +18,14 @@ class Filter
      *
      * @var string
      */
-    protected $_class;
+    protected $class;
 
     /**
      * Track Email Template
      *
      * @var string
      */
-    protected $_template;
+    protected $template;
 
     /**
      * Initialize Plugin
@@ -37,8 +37,8 @@ class Filter
         $class = null,
         $template = null
     ) {
-        $this->_class = $class;
-        $this->_template = $template;
+        $this->class = $class;
+        $this->template = $template;
     }
 
     /**
@@ -50,9 +50,9 @@ class Filter
      */
     public function beforeBlockDirective(TemplateFilter $subject, $construction)
     {
-        if ($this->_isDefaultTrackTemplate($construction[2])) {
-            $construction[2] = $this->_replaceBlockClass(
-                $this->_replaceTrackTemplate($construction[2])
+        if ($this->isDefaultTrackTemplate($construction[2])) {
+            $construction[2] = $this->replaceBlockClass(
+                $this->replaceTrackTemplate($construction[2])
             );
         }
         return [$construction];
@@ -64,7 +64,7 @@ class Filter
      * @param string $string
      * @return bool
      */
-    protected function _isDefaultTrackTemplate($string)
+    protected function isDefaultTrackTemplate($string)
     {
         return (bool) preg_match(
             "#template='Magento_Sales::email\/shipment\/track\.phtml'#s",
@@ -78,9 +78,9 @@ class Filter
      * @param string $string
      * @return string
      */
-    protected function _replaceBlockClass($string)
+    protected function replaceBlockClass($string)
     {
-        $class = $this->_class;
+        $class = $this->class;
         return preg_replace_callback(
             "#class='([^']+)'#s",
             function ($match) use ($class) {
@@ -96,9 +96,9 @@ class Filter
      * @param string $string
      * @return string
      */
-    protected function _replaceTrackTemplate($string)
+    protected function replaceTrackTemplate($string)
     {
-        $template = $this->_template;
+        $template = $this->template;
         return preg_replace_callback(
             "#template='([^']+)'#s",
             function ($match) use ($template) {

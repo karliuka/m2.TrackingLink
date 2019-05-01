@@ -19,7 +19,7 @@ class Group
      *
      * @var \Magento\Shipping\Model\Config
      */
-    protected $_shippingConfig;
+    protected $shippingConfig;
 
     /**
      * Initialize Plugin
@@ -29,7 +29,7 @@ class Group
     public function __construct(
         ShippingConfig $shippingConfig
     ) {
-        $this->_shippingConfig = $shippingConfig;
+        $this->shippingConfig = $shippingConfig;
     }
 
     /**
@@ -43,11 +43,11 @@ class Group
     public function beforeSetData(ElementGroup $subject, array $data, $scope)
     {
         if ($data['id'] == 'service_url' && $data['path'] == 'faonni_tracking') {
-            foreach ($this->_getTrackingCarriers() as $code => $title) {
+            foreach ($this->getTrackingCarriers() as $code => $title) {
                 if (isset($data['children'][$code])) {
                     continue;
                 }
-                $data['children'][$code] = $this->_getFieldData($code, $title);
+                $data['children'][$code] = $this->getFieldData($code, $title);
             }
         }
         return [$data, $scope];
@@ -60,7 +60,7 @@ class Group
      * @param string $title
      * @return array
      */
-    protected function _getFieldData($code, $title)
+    protected function getFieldData($code, $title)
     {
         return [
             'id' => $code,
@@ -79,10 +79,10 @@ class Group
      *
      * @return array
      */
-    protected function _getTrackingCarriers()
+    protected function getTrackingCarriers()
     {
         $carriers = [];
-        foreach ($this->_getAllCarriers() as $code => $carrier) {
+        foreach ($this->getAllCarriers() as $code => $carrier) {
             if ($carrier->isTrackingAvailable()) {
                 $carriers[$code] = $carrier->getConfigData('title');
             }
@@ -95,8 +95,8 @@ class Group
      *
      * @return  array
      */
-    protected function _getAllCarriers()
+    protected function getAllCarriers()
     {
-        return $this->_shippingConfig->getAllCarriers();
+        return $this->shippingConfig->getAllCarriers();
     }
 }
