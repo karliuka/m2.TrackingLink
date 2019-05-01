@@ -6,12 +6,13 @@
  * See COPYING.txt for license details.
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="faonni_tracking" translate="label" type="text" sortOrder="309" showInDefault="1" showInWebsite="1" showInStore="0">
             <label>Tracking Settings</label>
             <tab>sales</tab>
-			<resource>Faonni_TrackingLink::tracking</resource>
+            <resource>Faonni_TrackingLink::tracking</resource>
             <group id="service_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
                 <label>Tracking Service Url</label>
                 <field id="dhl" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
@@ -25,8 +26,8 @@
                 </field>
                 <field id="usps" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
                     <label>United States Postal Service</label>
-                </field>				
-            </group>			
+                </field>
+            </group>
         </section>
     </system>
 </config>

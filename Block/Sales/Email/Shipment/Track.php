@@ -21,31 +21,31 @@ class Track extends Template
      * @var \Faonni\TrackingLink\Helper\Data
      */
     protected $_helper;
-    
+
     /**
      * Initialize Block
-     *	
-     * @param TrackingLinkHelper $helper
+     *
      * @param Context $context
-     * @param array $data     
+     * @param TrackingLinkHelper $helper
+     * @param array $data
      */
     public function __construct(
+        Context $context,
         TrackingLinkHelper $helper,
-        Context $context, 
         array $data = []
     ) {
         $this->_helper = $helper;
-        
+
         parent::__construct(
             $context,
             $data
         );
-    }    
-    
+    }
+
     /**
      * Retrieve Tracking Url
      *
-     * @param \Magento\Shipping\Model\Order\Track $track 
+     * @param \Magento\Shipping\Model\Order\Track $track
      * @return string
      */
     public function getTrackingUrl($track)

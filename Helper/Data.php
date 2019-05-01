@@ -12,25 +12,25 @@ use Magento\Framework\App\Helper\AbstractHelper;
 /**
  * TrackingLink Helper
  */
-class Data extends AbstractHelper 
+class Data extends AbstractHelper
 {
     /**
      * Retrieve carrier url
      *
      * @param string $carrierCode
-     * @param int|Store $store     
+     * @param int|Store $store
      * @return string|null
      */
     public function getCarrierUrl($carrierCode, $store = null)
     {
         return $this->_getConfig("faonni_tracking/service_url/{$carrierCode}", $store);
     }
-    
+
     /**
      * Retrieve Store Configuration Data
      *
      * @param string $path
-     * @param int|Store $store	 
+     * @param int|Store $store
      * @return string|null
      */
     protected function _getConfig($path, $store = null)
