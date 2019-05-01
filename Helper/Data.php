@@ -6,7 +6,7 @@
 namespace Faonni\TrackingLink\Helper;
 
 use Magento\Store\Model\ScopeInterface;
-use use Magento\Store\Api\Data\StoreInterface;
+use Magento\Store\Api\Data\StoreInterface;
 use Magento\Framework\App\Helper\AbstractHelper;
 
 /**
