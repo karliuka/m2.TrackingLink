@@ -6,6 +6,10 @@
     "authors": [{
         "name" : "Karliuka Vitalii",
         "email": "karliuka.vitalii@gmail.com"
+    },
+	{
+        "name" : "Marcus Wolschon",
+        "email": "Marcus@Wolschon.biz"
     }],		
 	"license": [
 		"OSL-3.0"
