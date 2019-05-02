@@ -4,9 +4,10 @@
  * See COPYING.txt for license details.
  */
 ?>
-<?php $_shipment = $block->getShipment() ?>
-<?php $_order = $block->getOrder() ?>
-<?php if ($_shipment && $_order && $_shipment->getAllTracks()) : ?>
+<?php $shipment = $block->getShipment() ?>
+<?php $order = $block->getOrder() ?>
+<?php $collection = $block->getTracksCollection($shipment->getId()) ?>
+<?php if ($shipment && $order && $collection->count()) : ?>
     <br />
     <table class="shipment-track">
         <thead>
@@ -16,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($_shipment->getAllTracks() as $_item) : ?>
+            <?php foreach ($collection as $_item) : ?>
                 <tr>
                     <td><?= $block->escapeHtml($_item->getTitle()) ?>:</td>
                     <td>
