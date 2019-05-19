@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © 2011-2018 Karliuka Vitalii(karliuka.vitalii@gmail.com)
- *
+ * Copyright © Karliuka Vitalii(karliuka.vitalii@gmail.com)
  * See COPYING.txt for license details.
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">  
-    <module name="Faonni_TrackingLink" setup_version="2.0.8">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Faonni_TrackingLink" setup_version="2.0.9">
         <sequence>
-			<module name="Magento_Email"/>
+            <module name="Magento_Email"/>
         </sequence>
-	</module>	
+    </module>
 </config>

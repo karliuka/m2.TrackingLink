@@ -1,21 +1,20 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © 2011-2018 Karliuka Vitalii(karliuka.vitalii@gmail.com)
- *
+ * Copyright © Karliuka Vitalii(karliuka.vitalii@gmail.com)
  * See COPYING.txt for license details.
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
-	<!-- plugin -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- plugin -->
     <type name="\Magento\Config\Model\Config\Structure\Element\Group">
-        <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Config\Model\Config\Structure\Element\Group" />
-    </type>		
-    <type name="\Magento\Email\Model\Template\Filter">
-        <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Email\Model\Template\Filter" />
+        <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Config\Model\Config\Structure\Element\Group"/>
     </type>
-	<!-- filter config -->
+    <type name="\Magento\Email\Model\Template\Filter">
+        <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Email\Model\Template\Filter"/>
+    </type>
+    <!-- filter config -->
     <type name="Faonni\TrackingLink\Plugin\Email\Model\Template\Filter">
         <arguments>
             <argument name="class" xsi:type="string">Faonni\TrackingLink\Block\Sales\Email\Shipment\Track</argument>

@@ -1,59 +1,91 @@
 <?php
 /**
- * Copyright © 2011-2018 Karliuka Vitalii(karliuka.vitalii@gmail.com)
- *
+ * Copyright © Karliuka Vitalii(karliuka.vitalii@gmail.com)
  * See COPYING.txt for license details.
  */
 namespace Faonni\TrackingLink\Block\Sales\Email\Shipment;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
+use Magento\Sales\Model\ResourceModel\Order\Shipment\Track\CollectionFactory as TrackCollectionFactory;
 use Faonni\TrackingLink\Helper\Data as TrackingLinkHelper;
 
 /**
- * Email Track Block
+ * Track block
  */
 class Track extends Template
 {
     /**
-     * Helper
+     * Tracking helper
      *
      * @var \Faonni\TrackingLink\Helper\Data
      */
-    protected $_helper;
-    
+    protected $helper;
+
     /**
-     * Initialize Block
-     *	
-     * @param TrackingLinkHelper $helper
+     * Track collection
+     *
+     * @var \Magento\Sales\Model\ResourceModel\Order\Shipment\Track\Collection
+     */
+    protected $tracksCollection;
+
+    /**
+     * Track collection factory
+     *
+     * @var \Magento\Sales\Model\ResourceModel\Order\Shipment\Track\CollectionFactory
+     */
+    protected $trackCollectionFactory;
+
+    /**
+     * Initialize block
+     *
      * @param Context $context
-     * @param array $data     
+     * @param TrackingLinkHelper $helper
+     * @param TrackCollectionFactory $trackCollectionFactory
+     * @param array $data
      */
     public function __construct(
+        Context $context,
         TrackingLinkHelper $helper,
-        Context $context, 
+        TrackCollectionFactory $trackCollectionFactory,
         array $data = []
     ) {
-        $this->_helper = $helper;
-        
+        $this->helper = $helper;
+        $this->trackCollectionFactory = $trackCollectionFactory;
+
         parent::__construct(
             $context,
             $data
         );
-    }    
-    
+    }
+
     /**
-     * Retrieve Tracking Url
+     * Retrieve tracking url
      *
-     * @param \Magento\Shipping\Model\Order\Track $track 
+     * @param \Magento\Shipping\Model\Order\Track $track
      * @return string
      */
     public function getTrackingUrl($track)
     {
-        $url = $this->_helper->getCarrierUrl(
+        $url = $this->helper->getCarrierUrl(
             $track->getCarrierCode(),
             $track->getStoreId()
         );
         return $url ? str_replace('{{number}}', $track->getNumber(), $url) : null;
+    }
+
+    /**
+     * Retrieve tracks collection
+     *
+     * @param integer $shipmentId
+     * @return \Magento\Sales\Model\ResourceModel\Order\Shipment\Track\Collection
+     */
+    public function getTracksCollection($shipmentId)
+    {
+        if ($this->tracksCollection === null) {
+            $this->tracksCollection = $this->trackCollectionFactory->create();
+            $this->tracksCollection->setShipmentFilter($shipmentId);
+        }
+        return $this->tracksCollection;
     }
 }
