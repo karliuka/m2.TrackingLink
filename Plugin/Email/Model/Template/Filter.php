@@ -29,12 +29,12 @@ class Filter
     /**
      * Initialize Plugin
      *
-     * @param array $class
-     * @param array $template
+     * @param string $class
+     * @param string $template
      */
     public function __construct(
-        $class = null,
-        $template = null
+        $class,
+        $template
     ) {
         $this->class = $class;
         $this->template = $template;
@@ -80,7 +80,7 @@ class Filter
     protected function replaceBlockClass($string)
     {
         $class = $this->class;
-        return preg_replace_callback(
+        return (string)preg_replace_callback(
             "#class='([^']+)'#s",
             function ($match) use ($class) {
                 return "class='$class'";
@@ -98,7 +98,7 @@ class Filter
     protected function replaceTrackTemplate($string)
     {
         $template = $this->template;
-        return preg_replace_callback(
+        return (string)preg_replace_callback(
             "#template='([^']+)'#s",
             function ($match) use ($template) {
                 return "template='$template'";

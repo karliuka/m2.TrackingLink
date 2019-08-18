@@ -63,13 +63,13 @@ class Track extends Template
      * Retrieve tracking url
      *
      * @param \Magento\Shipping\Model\Order\Track $track
-     * @return string
+     * @return string|null
      */
     public function getTrackingUrl($track)
     {
         $url = $this->helper->getCarrierUrl(
             $track->getCarrierCode(),
-            $track->getStoreId()
+            (string)$track->getStoreId()
         );
         return $url ? str_replace('{{number}}', $track->getNumber(), $url) : null;
     }

@@ -20,7 +20,7 @@ class Uninstall implements UninstallInterface
      *
      * @var \Magento\Config\Model\ResourceModel\Config\Data\CollectionFactory
      */
-    private $configCollectionFactory;
+    protected $configCollectionFactory;
 
     /**
      * Initialize Setup
@@ -52,15 +52,12 @@ class Uninstall implements UninstallInterface
      *
      * @return void
      */
-    private function removeConfig()
+    protected function removeConfig()
     {
         $path = 'faonni_tracking/service_url';
         /** @var \Magento\Config\Model\ResourceModel\Config\Data\Collection $collection */
         $collection = $this->configCollectionFactory->create();
         $collection->addPathFilter($path);
-
-        foreach ($collection as $config) {
-            $config->delete();
-        }
+        $collection->walk('delete');
     }
 }

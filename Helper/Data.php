@@ -18,8 +18,8 @@ class Data extends AbstractHelper
      * Retrieve carrier url
      *
      * @param string $carrierCode
-     * @param StoreInterface $store
-     * @return string|null
+     * @param string|null $store
+     * @return string
      */
     public function getCarrierUrl($carrierCode, $store = null)
     {
@@ -30,8 +30,8 @@ class Data extends AbstractHelper
      * Retrieve Store Configuration Data
      *
      * @param string $path
-     * @param StoreInterface $store
-     * @return string|null
+     * @param string|null $store
+     * @return mixed
      */
     protected function getConfig($path, $store = null)
     {
