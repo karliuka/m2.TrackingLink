@@ -8,26 +8,26 @@ namespace Faonni\TrackingLink\Plugin\Email\Model\Template;
 use Magento\Email\Model\Template\Filter as TemplateFilter;
 
 /**
- * Filter Plugin
+ * Filter plugin
  */
 class Filter
 {
     /**
-     * Track Email Block Class Name
+     * Track email block class name
      *
      * @var string
      */
     protected $class;
 
     /**
-     * Track Email Template
+     * Track email template
      *
      * @var string
      */
     protected $template;
 
     /**
-     * Initialize Plugin
+     * Initialize plugin
      *
      * @param string $class
      * @param string $template
@@ -41,11 +41,11 @@ class Filter
     }
 
     /**
-     * Retrieve Block Html Directive
+     * Retrieve block html directive
      *
      * @param TemplateFilter $subject
-     * @param array $construction
-     * @return array
+     * @param mixed[] $construction
+     * @return mixed[]
      */
     public function beforeBlockDirective(TemplateFilter $subject, $construction)
     {
@@ -58,7 +58,7 @@ class Filter
     }
 
     /**
-     * Check is Track Template
+     * Check is track template
      *
      * @param string $string
      * @return bool
@@ -72,7 +72,7 @@ class Filter
     }
 
     /**
-     * Replace Track Block Class Name
+     * Replace track block class name
      *
      * @param string $string
      * @return string
@@ -90,7 +90,7 @@ class Filter
     }
 
     /**
-     * Replace Track Template Filename
+     * Replace track template filename
      *
      * @param string $string
      * @return string

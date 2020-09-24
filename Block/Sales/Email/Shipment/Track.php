@@ -42,7 +42,7 @@ class Track extends Template
      * @param Context $context
      * @param TrackingLinkHelper $helper
      * @param TrackCollectionFactory $trackCollectionFactory
-     * @param array $data
+     * @param mixed[] $data
      */
     public function __construct(
         Context $context,

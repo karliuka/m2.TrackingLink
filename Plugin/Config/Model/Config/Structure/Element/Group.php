@@ -21,7 +21,7 @@ class Group
     protected $shippingConfig;
 
     /**
-     * Initialize Plugin
+     * Initialize plugin
      *
      * @param ShippingConfig $shippingConfig
      */
@@ -32,12 +32,12 @@ class Group
     }
 
     /**
-     * Set Flyweight Data
+     * Set flyweight data
      *
      * @param ElementGroup $subject
-     * @param array $data
+     * @param mixed[] $data
      * @param string $scope
-     * @return array
+     * @return mixed[]
      */
     public function beforeSetData(ElementGroup $subject, array $data, $scope)
     {
@@ -53,11 +53,11 @@ class Group
     }
 
     /**
-     * Retrieve Tracking Carriers
+     * Retrieve tracking carriers
      *
      * @param string $code
      * @param string $title
-     * @return array
+     * @return mixed[]
      */
     protected function getFieldData($code, $title)
     {
@@ -74,9 +74,9 @@ class Group
     }
 
     /**
-     * Retrieve Tracking Carriers
+     * Retrieve tracking carriers
      *
-     * @return array
+     * @return mixed[]
      */
     protected function getTrackingCarriers()
     {
@@ -90,9 +90,9 @@ class Group
     }
 
     /**
-     * Retrieve All System Carriers
+     * Retrieve all system carriers
      *
-     * @return  array
+     * @return  mixed[]
      */
     protected function getAllCarriers()
     {
