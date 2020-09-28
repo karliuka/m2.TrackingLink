@@ -8,17 +8,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <!-- plugin -->
-    <type name="\Magento\Config\Model\Config\Structure\Element\Group">
+    <type name="Magento\Config\Model\Config\Structure\Element\Group">
         <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Config\Model\Config\Structure\Element\Group"/>
     </type>
-    <type name="\Magento\Email\Model\Template\Filter">
-        <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Email\Model\Template\Filter"/>
-    </type>
-    <!-- filter config -->
-    <type name="Faonni\TrackingLink\Plugin\Email\Model\Template\Filter">
-        <arguments>
-            <argument name="class" xsi:type="string">Faonni\TrackingLink\Block\Sales\Email\Shipment\Track</argument>
-            <argument name="template" xsi:type="string">Faonni_TrackingLink::email/shipment/track.phtml</argument>
-        </arguments>
+    <type name="Magento\Sales\Block\DataProviders\Email\Shipment\TrackingUrl">
+        <plugin name="faonni_trackinglink" type="Faonni\TrackingLink\Plugin\Sales\Block\DataProviders\Email\Shipment\TrackingUrlPlugin"/>
     </type>
 </config>
