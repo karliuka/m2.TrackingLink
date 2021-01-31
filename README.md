@@ -25,7 +25,7 @@ Magento CE(EE) 2.0.x, 2.1.x, 2.2.x, 2.3.x, 2.4.x
     ```bash
     composer require faonni/module-tracking-link:2.0.*
     ```
-     For Magento CE (EE) 2.4.x
+     For Magento CE(EE) 2.4.x
 
     ```bash
     composer require faonni/module-tracking-link:2.4.*
