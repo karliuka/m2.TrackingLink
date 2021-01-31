@@ -60,6 +60,7 @@ In the Magento Admin Panel go to *Stores > Configuration > Sales > Tracking Sett
 ## Usage
 #### Shipment Email
 <img alt="Magento2 Tracking Link" src="https://karliuka.github.io/m2/tracking-link/email.png" style="width:100%"/>
+
 #### Service Tracking Page
 <img alt="Magento2 Tracking Link" src="https://karliuka.github.io/m2/tracking-link/ups.png" style="width:100%"/>
 
