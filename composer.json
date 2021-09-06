@@ -3,10 +3,12 @@
     "description": "Extension add Tracking Url in Shipment Email.",
     "type": "magento2-module",
     "version": "2.0.9",
-    "authors": [{
-        "name": "Karliuka Vitalii",
-        "email": "karliuka.vitalii@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Karliuka Vitalii",
+            "email": "karliuka.vitalii@gmail.com"
+        }
+    ],
     "license": [
         "OSL-3.0"
     ],
@@ -14,7 +16,7 @@
         "magento/module-email": "100.0.*|100.1.*|100.2.*|101.0.*"
     },
     "autoload": {
-        "files": [ 
+        "files": [
             "registration.php"
         ],
         "psr-4": {
