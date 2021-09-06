@@ -16,14 +16,12 @@ use Magento\Config\Model\ResourceModel\Config\Data\CollectionFactory as ConfigCo
 class Uninstall implements UninstallInterface
 {
     /**
-     * Config Collection Factory
-     *
-     * @var \Magento\Config\Model\ResourceModel\Config\Data\CollectionFactory
+     * @var ConfigCollectionFactory
      */
     protected $configCollectionFactory;
 
     /**
-     * Initialize Setup
+     * Initialize setup
      *
      * @param ConfigCollectionFactory $configCollectionFactory
      */
@@ -34,7 +32,7 @@ class Uninstall implements UninstallInterface
     }
 
     /**
-     * Uninstall DB Schema for a Module TrackingLink
+     * Uninstall DB Schema
      *
      * @param SchemaSetupInterface $setup
      * @param ModuleContextInterface $context
@@ -48,14 +46,13 @@ class Uninstall implements UninstallInterface
     }
 
     /**
-     * Remove Config
+     * Remove config
      *
      * @return void
      */
     protected function removeConfig()
     {
         $path = 'faonni_tracking/service_url';
-        /** @var \Magento\Config\Model\ResourceModel\Config\Data\Collection $collection */
         $collection = $this->configCollectionFactory->create();
         $collection->addPathFilter($path);
         $collection->walk('delete');

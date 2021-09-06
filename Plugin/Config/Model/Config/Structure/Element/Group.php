@@ -14,8 +14,6 @@ use Magento\Shipping\Model\Config as ShippingConfig;
 class Group
 {
     /**
-     * Shipping Config
-     *
      * @var \Magento\Shipping\Model\Config
      */
     protected $shippingConfig;
