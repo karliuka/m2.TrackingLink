@@ -1,0 +1,6 @@
+parameters:
+    checkExplicitMixedMissingReturn: true
+    checkPhpDocMissingReturn: true
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        - '#method Magento\\Framework\\Data\\Collection::walk\(\) expects callable\(\):#'

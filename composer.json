@@ -2,19 +2,24 @@
     "name": "faonni/module-tracking-link",
     "description": "Extension add Tracking Url in Shipment Email.",
     "type": "magento2-module",
-    "version": "2.0.9",
-    "authors": [{
-        "name": "Karliuka Vitalii",
-        "email": "karliuka.vitalii@gmail.com"
-    }],
+    "version": "2.4.0",
+    "authors": [
+        {
+            "name": "Karliuka Vitalii",
+            "email": "karliuka.vitalii@gmail.com"
+        }
+    ],
     "license": [
         "OSL-3.0"
     ],
     "require": {
-        "magento/module-email": "100.0.*|100.1.*|100.2.*|101.0.*"
+        "magento/framework": "103.0.*",
+        "magento/module-config": "101.2.*",
+        "magento/module-sales": "103.0.*",
+        "magento/module-shipping": "100.4.*"
     },
     "autoload": {
-        "files": [ 
+        "files": [
             "registration.php"
         ],
         "psr-4": {
